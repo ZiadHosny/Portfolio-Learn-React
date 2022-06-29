@@ -14,7 +14,7 @@ const Counter = () => {
   };
 
   return (
-    <div className="text-center card bg-dark w-50 container mt-5 p-3">
+    <div className=" card h-100 w-50 text-center bg-dark my-5  mx-auto p-5">
       <Number number={number} />
       <div className="row gap-5 m-5">
         <Increment incrementFun={increment} />

@@ -16,26 +16,26 @@ const Products = () => {
       .then((json) => setProducts(json));
   };
 
-  return products.length == 0 ? (
+  return products.length === 0 ? (
     <Spinner animation="border" className="Spinner" />
   ) : (
-    <div className="row justify-content-between">
+    <div className="row justify-content-between g-3">
       {products.map((product) => {
         return (
-          <div key={product.id} className="col-4 ">
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={product.image} className="Image" />
-              <Card.Body>
-                <Card.Title>{product.title}</Card.Title>
-                <Card.Text>{product.description}</Card.Text>
-                <Link
-                  to={`/products/${product.id}`}
-                  className="btn btn-success"
-                >
-                  Add To Card
-                </Link>
-              </Card.Body>
-            </Card>
+          <div key={product.id} className="col-3 ">
+            <Link
+              to={`/products/${product.id}`}
+              className="link-secondary text-decoration-none"
+              style={{ fontSize: '12px' }}
+            >
+              <Card className="border-0">
+                <Card.Img variant="top" src={product.image} className="Image" />
+                <Card.Body>
+                  <Card.Title className="Title">{product.title}</Card.Title>
+                  <Card.Title className="Price">$ {product.price}</Card.Title>
+                </Card.Body>
+              </Card>
+            </Link>
           </div>
         );
       })}

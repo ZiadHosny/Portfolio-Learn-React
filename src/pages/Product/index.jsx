@@ -7,7 +7,6 @@ const Product = () => {
   const [product, setProduct] = useState(null);
 
   const { id } = useParams();
-  console.log(id);
 
   useEffect(() => {
     getProduct();
@@ -23,11 +22,12 @@ const Product = () => {
     <Spinner animation="border" className="Spinner" />
   ) : (
     <div>
-      <Card>
-        <Card.Img variant="top" src={product.image} className="Img" />
+      <Card border="0" className="text-center">
+        <img src={product.image} className="Img" />
         <Card.Body>
           <Card.Title>{product.title}</Card.Title>
           <Card.Text>{product.description}</Card.Text>
+          <Card.Title>$ {product.price}</Card.Title>
         </Card.Body>
       </Card>
     </div>
