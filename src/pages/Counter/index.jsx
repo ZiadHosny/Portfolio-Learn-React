@@ -1,6 +1,6 @@
-import Number from '../Components/Number';
-import Increment from '../Components/Increment';
-import Decrement from '../Components/Decrement';
+import Number from '../../components/Counter/Number';
+import Increment from '../../components/Counter/Increment';
+import Decrement from '../../components/Counter/Decrement';
 import { useState } from 'react';
 
 const Counter = () => {
@@ -14,7 +14,7 @@ const Counter = () => {
   };
 
   return (
-    <div className="card bg-dark w-50 container mt-5 p-3">
+    <div className="text-center card bg-dark w-50 container mt-5 p-3">
       <Number number={number} />
       <div className="row gap-5 m-5">
         <Increment incrementFun={increment} />

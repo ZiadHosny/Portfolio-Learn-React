@@ -1,11 +1,7 @@
-import Counter from './Pages/Counter';
+import Router from './Router/Router';
 
 function App() {
-  return (
-    <div className="text-center">
-      <Counter />
-    </div>
-  );
+  return <Router />;
 }
 
 export default App;
