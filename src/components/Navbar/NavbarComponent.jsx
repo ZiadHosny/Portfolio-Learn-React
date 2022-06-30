@@ -21,6 +21,9 @@ const NavbarComponent = () => {
           <Link to="/products" className="nav-link">
             Products
           </Link>
+          <Link to="/todo-list" className="nav-link">
+            Todo-list
+          </Link>
         </Nav>
       </Container>
     </Navbar>
