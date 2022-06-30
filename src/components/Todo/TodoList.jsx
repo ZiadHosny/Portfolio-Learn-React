@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { deleteFromTodoAction } from '../../redux/actions/todoActions';
 
 const TodoList = () => {
-  const { todos } = useSelector((state) => state);
+  const { todos } = useSelector((state) => state.todoReducer);
 
   const dispatch = useDispatch();
 
