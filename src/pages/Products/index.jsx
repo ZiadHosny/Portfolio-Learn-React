@@ -1,22 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './index.css';
 import { Card, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { getProducts } from '../../redux/features/productsSlice';
+import { useDispatch, useSelector } from 'react-redux/es/exports';
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+
+  const { loading, products } = useSelector((state) => state.shop);
 
   useEffect(() => {
-    getProducts();
+    dispatch(getProducts());
   }, []);
 
-  const getProducts = () => {
-    fetch('https://fakestoreapi.com/products')
-      .then((res) => res.json())
-      .then((json) => setProducts(json));
-  };
-
-  return products.length === 0 ? (
+  return loading ? (
     <Spinner animation="border" className="Spinner" />
   ) : (
     <div className="row justify-content-between g-3">

@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { increment } from '../../redux/actions/counterActions';
+import { increment } from '../../redux/features/counterSlice';
 
 const Increment = () => {
   const dispatch = useDispatch();

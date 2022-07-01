@@ -1,6 +1,8 @@
-import { createStore } from 'redux';
-import { reducers } from './reducers';
+import { configureStore } from '@reduxjs/toolkit';
+import counter from './features/counterSlice';
+import todo from './features/todoSlice';
+import shop from './features/productsSlice';
 
-export const Store = createStore(reducers);
-
-console.log(Store.getState());
+export const Store = configureStore({
+  reducer: { counter, todo, shop },
+});

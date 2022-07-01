@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodoAction } from '../../redux/actions/todoActions';
+import { addTodo } from '../../redux/features/todoSlice';
 
 const TodoForm = () => {
   const [title, setTitle] = useState('');
@@ -11,7 +11,7 @@ const TodoForm = () => {
   const handleSubmission = (e) => {
     e.preventDefault();
     if (title && content) {
-      dispatch(addTodoAction({ title, content }));
+      dispatch(addTodo({ title, content }));
       setTitle('');
       setContent('');
     }
