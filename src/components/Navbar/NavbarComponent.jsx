@@ -12,17 +12,18 @@ const NavbarComponent = () => {
           <Link to="/" className=" nav-link">
             Home
           </Link>
-          <Link to="/about" className="nav-link">
-            About
-          </Link>
-          <Link to="/counter" className="nav-link">
-            Counter
+
+          <Link to="/support" className="nav-link">
+            Support
           </Link>
           <Link to="/products" className="nav-link">
             Products
           </Link>
           <Link to="/todo-list" className="nav-link">
             Todo-list
+          </Link>
+          <Link to="/sign-up" className="nav-link">
+            Sign Up
           </Link>
         </Nav>
       </Container>

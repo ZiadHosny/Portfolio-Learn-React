@@ -9,7 +9,7 @@ const Increment = () => {
   };
 
   return (
-    <button onClick={incrementFun} className="btn btn-outline-light fs-1 col">
+    <button onClick={incrementFun} className="btn btn-outline-light col btn-lg">
       +
     </button>
   );

@@ -9,7 +9,10 @@ const Decrement = () => {
   };
 
   return (
-    <button onClick={decrementFun} className="btn btn-outline-danger fs-1 col ">
+    <button
+      onClick={decrementFun}
+      className="btn btn-outline-danger col btn-lg"
+    >
       -
     </button>
   );
