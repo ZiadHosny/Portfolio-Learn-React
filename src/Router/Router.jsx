@@ -10,7 +10,7 @@ import SignUp from '../pages/register';
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='Portfolio-Learn-React'>
       <NavbarComponent />
       <Container>
         <Routes>
